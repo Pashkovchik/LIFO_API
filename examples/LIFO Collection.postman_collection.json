@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "438ed0a8-56a9-4272-acd2-6a4db26197e0",
+		"name": "LIFO Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21388581"
+	},
+	"item": [
+		{
+			"name": "POP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/stack/2/pop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"stack",
+						"2",
+						"pop"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POP",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/stack/2/pop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"stack",
+								"2",
+								"pop"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Dec 2022 06:21:26 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"status_code\": 200,\n    \"message\": \"get pop from stack\",\n    \"payload\": [\n        {\n            \"result\": {\n                \"id\": 4,\n                \"stackID\": 2,\n                \"info\": \"eee\",\n                \"createdDate\": \"2022-12-09T06:21:15.482028Z\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "PEEK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/stack/2/peek",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"stack",
+						"2",
+						"peek"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PEEK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/stack/2/peek",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"stack",
+								"2",
+								"peek"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Dec 2022 07:07:15 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"status_code\": 200,\n    \"message\": \"get pop from stack\",\n    \"payload\": [\n        {\n            \"result\": {\n                \"id\": 2,\n                \"stackID\": 2,\n                \"info\": \"eee\",\n                \"createdDate\": \"2022-12-09T06:20:57.062318Z\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "PUSH",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"info\": \"eee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/stack/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"stack",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUSH",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"info\": \"eee\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/stack/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"stack",
+								"1"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Dec 2022 06:21:17 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "71"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Created\",\n    \"status_code\": 201,\n    \"message\": \"added info to stack\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create New Stack",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"stack1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/stack/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"stack",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create New Stack",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"stack1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/stack/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"stack",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Dec 2022 06:47:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Created\",\n    \"status_code\": 201,\n    \"message\": \"created new stack\",\n    \"payload\": [\n        {\n            \"stackID\": 3\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Stack By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"stack1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/stack/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"stack",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Stack By ID",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"stack1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/stack/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"stack",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Dec 2022 07:04:44 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"status_code\": 200,\n    \"message\": \"deleted stack\",\n    \"payload\": [\n        {\n            \"stackID\": 3\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List Of Stack",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"stack1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/stack/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"stack",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get List Of Stack",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"stack1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/stack/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"stack",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Dec 2022 06:50:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "397"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"status_code\": 200,\n    \"message\": \"created new stack\",\n    \"payload\": [\n        {\n            \"stackID\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"stack1\",\n                    \"createdDate\": \"2022-12-09T06:20:44.395135Z\",\n                    \"stackData\": [\n                        {\n                            \"id\": 3,\n                            \"stackID\": 2,\n                            \"info\": \"eee\",\n                            \"createdDate\": \"2022-12-09T06:20:59.56157Z\"\n                        },\n                        {\n                            \"id\": 2,\n                            \"stackID\": 2,\n                            \"info\": \"eee\",\n                            \"createdDate\": \"2022-12-09T06:20:57.062318Z\"\n                        }\n                    ]\n                },\n                {\n                    \"id\": 3,\n                    \"name\": \"stack1\",\n                    \"createdDate\": \"2022-12-09T06:47:50.436094Z\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

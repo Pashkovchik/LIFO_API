@@ -1,0 +1,16 @@
+app:
+  name: ${APP_NAME:lifo-rest-api}
+  version: ${APP_VERSION:1.0.0}
+
+http:
+  port: '8000'
+
+log:
+  logLevel: debug
+
+postgres:
+#   uri: ${PG_URI:postgres://user:mypassword@localhost:5432/lifo_db?sslmode=disable}
+  uri: ${PG_URI:postgres://user:mypassword@postgres:5432/lifo_db?sslmode=disable}
+  maxPool: 2
+  connAttempts: 5
+  connTimeout: 1
